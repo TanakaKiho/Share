@@ -22,13 +22,24 @@ public class MenuSaveGameManager : MonoBehaviour
     public GameObject Obj;
     public GameObject ItemPrefab;
     public GameObject Scroll;
+    string test="Empty";
     void Start()
     {
-        Item1.text = "Empty";
-        Item2.text = "Empty";
-        Item3.text = "Empty";
-        Item4.text = "Empty";
-        Item5.text = "Empty";
+        /*  Item1.text = "Empty1";
+          Item2.text = "Empty2";
+          Item3.text = "Empty";
+          Item4.text = "Empty";
+          Item5.text = "Empty";*/
+        //try
+        //{
+            test = SaveData.GetString("test");
+            Debug.Log(test);
+        //}
+        //catch//(NullReferenceException e)
+        //{
+            //Debug.Log(e);
+          //  Debug.Log(test);
+        //}
     }
     // Update is called once per frame
     void Update()
@@ -53,24 +64,27 @@ public class MenuSaveGameManager : MonoBehaviour
             //Obj = (GameObject)Instantiate(ItemPrefab, this.transform.position, Quaternion.identity);
             //Obj.transform.parent = Scroll.transform;
            // Instantiate(ItemPrefab);
-            Debug.Log(s);
+            //Debug.Log(s);
         }
     }
+    /*
     void OnTriggerStay2D(Collider2D col)
     {
+        //col.gameObject.SetActive(false);
         if (Input.GetKeyDown(KeyCode.N))
         {
+            Debug.Log("ê⁄êG2");
             if (col.gameObject.CompareTag("Item"))
             {
-                ItemName = col.gameObject.name;
+                //ItemName = col.gameObject.name;
                 // ItemList.Add(ItemName);
-                ItemList[ItemCount] = ItemName;
-                ItemCount++;
+                //ItemList[ItemCount] = ItemName;
+                //ItemCount++;
                 Debug.Log("ê⁄êG3");
                 col.gameObject.SetActive(false);
             }
         }
-    }
+    }/*
     string str;
     public void OnClickItem(int n)
     {
@@ -83,6 +97,6 @@ public class MenuSaveGameManager : MonoBehaviour
             str = "Apple";
         }
         Debug.Log(str);
-    }
+    }*/
     
 }

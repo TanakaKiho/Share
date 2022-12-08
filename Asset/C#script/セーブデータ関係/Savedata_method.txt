@@ -1,0 +1,20 @@
+
+Load()					指定のパスからjsonデータを読み込みます。
+Save()					変更された値を指定ファイルに保存します。
+SetInt(string key, int value)		int型の値を設定します。
+SetFloat(string key, float value)	float型の値を設定します。
+SetString(string key, string value)	string型の値を設定します。
+SetClass<T>(string key, T value)	T型の値を設定します。
+SetList<T>(string key, List<T> value)	List<T>型の値を設定します。
+GetInt(string key, int default)		keyで指定されたint型の値を取得します。
+GetFloat(string key, float default)	keyで指定されたfloat型の値を取得します。
+GetString(string key, string default)	keyで指定されたstring型の値を取得します。
+GetClass<T>(string key, T default)	keyで指定されたT型の値を取得します。
+GetList<T>(string key, List<T> default)	keyで指定されたList<T>型の値を取得します。
+Remove(string key)			keyで指定された値を削除します。
+Clear()	保存データをすべて削除します。
+
+Save()を呼び出したときのみファイルアクセスするようにしています。
+
+参考サイト
+https://magnaga.com/2016/04/25/unity-save2/
